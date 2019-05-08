@@ -31,7 +31,7 @@ public class SchoolApplication extends  SchoolDAO implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		System.out.println(schoolRepository.findAll());
+		//System.out.println(schoolRepository.findAll());
 //		SchoolDAO s1=new SchoolDAO("2","gaurav","X",5546);
 //		List<SchoolDAO> schoolDAOList=new ArrayList<>();
 //		schoolDAOList.add(s1);
@@ -51,12 +51,10 @@ public class SchoolApplication extends  SchoolDAO implements CommandLineRunner {
 //
 //
 //
-//		List<SchoolDAO>schoolDAOList=schoolRepository.findAll();
-//		for (SchoolDAO it:schoolDAOList){
-//			System.out.println("Testing"+it);
-//			it.setFees();
-//
-//		}
+		SchoolDAO it=  schoolRepository.findByName("aman");
+
+			System.out.println(it.getId()+" "+it.getRoll()+" "+it.getName()+" "+it.getStandard()+" "+it.getFees());
+
 
 
 	}
